@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.header-2 {
+  text-align: left;  
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.border-table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+ }
+ .border-table th {
+  padding: 10px;
+  background: #e9faf9;
+  border: solid 1px #778ca3;
+ }
+ .border-table td {
+  padding: 10px;
+  border: solid 1px #778ca3;
+ }

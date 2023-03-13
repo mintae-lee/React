@@ -13,13 +13,18 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
-    <div>
-      <h2>Products:</h2>
-      <ul>
+    <div className='container'>
+      <h2 className='header-2'>Products</h2>
+      <table className='border-table'>
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
         {products.map(product => (
           <ProductItem key={product.id} product={product} />
         ))}
-      </ul>
+      </table>
     </div>
   );
 };

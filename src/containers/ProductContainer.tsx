@@ -19,11 +19,19 @@ const ProductContainer: React.FC = () => {
 
   useEffect(() => {
     // useEffect를 사용하여 컴포넌트가 마운트되었을 때 
-    // API로부터 데이터를 불러와 products 상태를 업데이트
-    fetch('https://myapi.com/products')
-      .then(response => response.json())
-      .then(data => setProducts(data));
+    // axios 로 API 데이터를 불러와 products 상태를 업데이트를 여기서 하기
+    
+    const mockData = [
+      { id: 1, name: 'name1', price: 1000 },
+      { id: 2, name: 'name2', price: 1000 },
+      { id: 3, name: 'name3', price: 1000 },
+      { id: 4, name: 'name4', price: 1000 },
+      { id: 5, name: 'name5', price: 1000 }
+    ]
+    setProducts(mockData)
   }, []);
+  
+  console.log("products: ", products);
 
   return (
     <div>

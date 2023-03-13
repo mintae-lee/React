@@ -12,10 +12,11 @@ interface ProductItemProps {
 
 const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
   return (
-    <li>
-      <strong>{product.name}</strong>
-      <span>{product.price}</span>
-    </li>
+    <tr>
+      <td>{ product.id }</td>
+      <td>{ product.name }</td>
+      <td>{ product.price }</td>
+    </tr>
   );
 };
 
