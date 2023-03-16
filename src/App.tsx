@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Header title="Sample React App" />
+      <Header />
       <ProductContainer />
       <Footer />
     </div>

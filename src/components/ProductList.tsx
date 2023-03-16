@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductItem from './ProductItem';
+import { Table } from 'semantic-ui-react';
 
 interface Product {
   id: number;
@@ -15,16 +16,21 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
     <div className='container'>
       <h2 className='header-2'>Products</h2>
-      <table className='border-table'>
-        <tr>
-          <th>No</th>
-          <th>Name</th>
-          <th>Price</th>
-        </tr>
-        {products.map(product => (
-          <ProductItem key={product.id} product={product} />
-        ))}
-      </table>
+      <Table celled>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell>ID</Table.HeaderCell>
+            <Table.HeaderCell>Name</Table.HeaderCell>
+            <Table.HeaderCell>Price </Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+
+        <Table.Body>
+          {products.map(product => (
+            <ProductItem key={product.id} product={product} />
+          ))}
+        </Table.Body>
+      </Table>
     </div>
   );
 };

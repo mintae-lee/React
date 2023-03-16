@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Craco(Create React App Configuration Override)는 보다 쉽게 CRA 설정이 가능하도록 지원해주는 라이브러리입니다.
+
 ## Available Scripts
 
 In the project directory, you can run:

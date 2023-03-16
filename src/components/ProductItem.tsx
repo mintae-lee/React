@@ -1,4 +1,5 @@
 import React from 'react';
+import { Table } from 'semantic-ui-react';
 
 interface Product {
   id: number;
@@ -12,11 +13,11 @@ interface ProductItemProps {
 
 const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
   return (
-    <tr>
-      <td>{ product.id }</td>
-      <td>{ product.name }</td>
-      <td>{ product.price }</td>
-    </tr>
+    <Table.Row>
+      <Table.Cell>{ product.id }</Table.Cell>
+      <Table.Cell>{ product.name }</Table.Cell>
+      <Table.Cell>{ product.price.toLocaleString() } 円</Table.Cell>
+    </Table.Row>
   );
 };
 

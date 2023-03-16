@@ -22,11 +22,11 @@ const ProductContainer: React.FC = () => {
     // axios 로 API 데이터를 불러와 products 상태를 업데이트를 여기서 하기
     
     const mockData = [
-      { id: 1, name: 'name1', price: 1000 },
-      { id: 2, name: 'name2', price: 1000 },
-      { id: 3, name: 'name3', price: 1000 },
-      { id: 4, name: 'name4', price: 1000 },
-      { id: 5, name: 'name5', price: 1000 }
+      { id: 1, name: 'Adaptor', price: 20000 },
+      { id: 2, name: 'Pencil', price: 700 },
+      { id: 3, name: 'Paper', price: 1080 },
+      { id: 4, name: 'Desk', price: 30000 },
+      { id: 5, name: 'Chair', price: 20000 }
     ]
     setProducts(mockData)
   }, []);
