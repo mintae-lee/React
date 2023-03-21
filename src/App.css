@@ -37,6 +37,10 @@
   }
 }
 
+.header-1 {
+  text-align: left;  
+}
+
 .header-2 {
   text-align: left;  
 }
@@ -61,3 +65,48 @@
   padding: 10px;
   border: solid 1px #778ca3;
  }
+ 
+ .footer {
+  padding: 2rem;
+  font-size: 15px;
+  color: #232323;
+  background: #fff;
+  border-top: solid 1px #f2f2f2;
+}
+
+.footer__navi {
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.footer__navi li {
+  display: inline-block;
+}
+
+.footer__navi li a {
+  color: #232323;
+}
+
+.footer__navi li:not(:last-child) {
+  margin-right: 16px;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 1rem;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .md-flex {
+    display: flex;
+  }
+
+  .md-justify-between {
+    justify-content: space-between;
+  }
+
+  .copyright {
+    text-align: left;
+  }
+}

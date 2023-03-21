@@ -1,12 +1,7 @@
 import React from 'react';
 import ProductItem from './ProductItem';
-import { Table } from 'semantic-ui-react';
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-}
+import { Grid } from 'semantic-ui-react';
+import { Product } from '../services/productService';
 
 interface ProductListProps {
   products: Product[];
@@ -14,23 +9,19 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
-    <div className='container'>
-      <h2 className='header-2'>Products</h2>
-      <Table celled>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>ID</Table.HeaderCell>
-            <Table.HeaderCell>Name</Table.HeaderCell>
-            <Table.HeaderCell>Price </Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-
-        <Table.Body>
-          {products.map(product => (
-            <ProductItem key={product.id} product={product} />
-          ))}
-        </Table.Body>
-      </Table>
+    <div>
+      {products.length > 0 && (
+        <>
+          <h2 className='header-2'>ネコ一覧</h2>
+            <Grid>
+              <Grid.Row columns={4}>
+              {products.map((product, index) => (
+                <ProductItem key={product.id} index={index + 1} product={product} />
+              ))}
+              </Grid.Row>
+            </Grid>
+        </>
+      )}
     </div>
   );
 };

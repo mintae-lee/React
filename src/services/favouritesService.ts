@@ -6,19 +6,22 @@
  * 그리고 이를 통해 타입 관련 오류를 사전에 검출할 수 있게 됩니다.
  */
 
-export interface Product {
-  breeds: [];
+export interface Favourite {
   id: string;
-  url: string;
-  width: number;
-  height: number;
+  image_id: string;
+  sub_id: number;
+  created_at: number;
+  image: {
+    id: string;
+    url: string;
+  }
 }
 
-class ProductService {
-  async fetchProducts(): Promise<Product[]> {
-    const params = {limit : "15"};
+class FavouritesService {
+  async fetchFavourites(): Promise<Favourite[]> {
+    const params = {limit : "20", order : 'DESC', sub_id: '' };
     const query = new URLSearchParams(params);
-    const url = `https://api.thecatapi.com/v1/images/search?${query}`;
+    const url = `https://api.thecatapi.com/v1/favourites?${query}`;
     const header = {
       "x-api-key": "live_sGa4jTiaQae1IO9z1PA9QZ0FncJrDgKJOcdjy0lwArSj4JBwwM0ByGThEaW3uarR"
     }
@@ -28,6 +31,6 @@ class ProductService {
   }
 }
 
-const productServiceInstance = new ProductService();
+const favouritesServiceInstance = new FavouritesService();
 
-export default productServiceInstance;
+export default favouritesServiceInstance;

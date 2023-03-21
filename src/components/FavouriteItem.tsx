@@ -1,20 +1,20 @@
 import React from 'react';
 import { Grid, Card, Image, Icon } from 'semantic-ui-react';
-import { Product } from '../services/productService';
+import { Favourite } from '../services/favouritesService';
 
-interface ProductItemProps {
+interface FavouriteItemProps {
   index: number;
-  product: Product;
+  favourite: Favourite;
 }
 
-const ProductItem: React.FC<ProductItemProps> = ({ index, product }) => {
+const FavouriteItem: React.FC<FavouriteItemProps> = ({ index, favourite }) => {
   return (
     <Grid.Column>
       <Card style={
           { margin: "15px 0" }
         }>
       <Image 
-        src={product.url} 
+        src={favourite.image?.url} 
         rounded 
         style={
           { width: "100%", 
@@ -23,10 +23,10 @@ const ProductItem: React.FC<ProductItemProps> = ({ index, product }) => {
           }
         } />
         <Card.Content>
-          <Card.Header>{product.id}.jpg</Card.Header>
-          <Card.Meta>{product.width} x {product.height}</Card.Meta>
+          <Card.Header>{favourite.id}</Card.Header>
+          <Card.Meta>{favourite.image_id}</Card.Meta>
           <Card.Description>
-          かわいい猫ちゃん
+          お気に入り猫ちゃん
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
@@ -40,4 +40,4 @@ const ProductItem: React.FC<ProductItemProps> = ({ index, product }) => {
   );
 };
 
-export default ProductItem;
+export default FavouriteItem;
