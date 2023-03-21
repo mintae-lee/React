@@ -14,6 +14,8 @@ const TopNavigation: React.FC<MenuProps> = () => {
   return (
     <Menu>
       <Menu.Item
+        as={Link}
+        to="/"
         name='TOP'
         active={activeItem === 'TOP'}
         onClick={handleItemClick}
