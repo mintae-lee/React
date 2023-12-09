@@ -19,13 +19,13 @@ const SiteHeader: React.FC = () => {
       <Menu.Item>
         <a href='http://localhost:3000/' style={{ display: 'flex', alignItems: 'center' }}>
           <img src={logo} alt='logo' style={{ height: '30px', marginRight: '10px' }} />
-          <span style={{ fontSize: '24px', fontWeight: '700' }}>React - Cats</span>
+          <span style={{ fontSize: '24px', fontWeight: '700' }}>Cats</span>
         </a>
       </Menu.Item>
-      <Menu.Menu position='right'>
+      <Menu.Menu position='right' style={{ marginRight: '16px' }}>
         <Menu.Item
-          name='logout'
-          active={activeItem === 'logout'}
+          name='Help'
+          active={activeItem === 'help'}
           onClick={handleItemClick}
         />
       </Menu.Menu>

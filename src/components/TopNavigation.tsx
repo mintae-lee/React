@@ -32,14 +32,6 @@ const TopNavigation: React.FC<MenuProps> = () => {
       >
         お気に入り
       </Menu.Item>
-
-      <Menu.Item
-        name='review'
-        active={activeItem === 'review'}
-        onClick={handleItemClick}
-      >
-        お客様の声
-      </Menu.Item>
       
       <Menu.Menu position='right'>
         <Menu.Item>
