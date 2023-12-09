@@ -12,14 +12,13 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
     <div>
       {products.length > 0 && (
         <>
-          <h2 className='header-2'>おすすめ</h2>
-            <Grid doubling columns={4}>
-              <Grid.Row>
-              {products.map((product, index) => (
-                <ProductItem key={product.id} index={index + 1} product={product} />
-              ))}
-              </Grid.Row>
-            </Grid>
+          <Grid doubling columns={4}>
+            <Grid.Row>
+            {products.map((product, index) => (
+              <ProductItem key={product.id} index={index + 1} product={product} />
+            ))}
+            </Grid.Row>
+          </Grid>
         </>
       )}
     </div>

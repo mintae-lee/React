@@ -15,14 +15,14 @@ const SiteHeader: React.FC = () => {
   }
 
   return (
-    <Menu secondary style={{ marginTop: '10px' }}>
+    <Menu secondary style={{ marginTop: '10px', padding: '0 10px', borderBottom: '1px solid #d4d4d5' }}>
       <Menu.Item>
         <a href='http://localhost:3000/' style={{ display: 'flex', alignItems: 'center' }}>
           <img src={logo} alt='logo' style={{ height: '30px', marginRight: '10px' }} />
           <span style={{ fontSize: '24px', fontWeight: '700' }}>Cats</span>
         </a>
       </Menu.Item>
-      <Menu.Menu position='right' style={{ marginRight: '16px' }}>
+      <Menu.Menu position='right'>
         <Menu.Item
           name='Help'
           active={activeItem === 'help'}
