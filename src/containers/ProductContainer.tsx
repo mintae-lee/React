@@ -6,7 +6,7 @@
 import React, { useEffect, useState } from 'react';
 import ProductList from '../components/ProductList';
 import productService, { Product } from '../services/productService';
-import { Dimmer, Loader, Container, Header } from 'semantic-ui-react';
+import { Dimmer, Loader, Container } from 'semantic-ui-react';
 
 
 // ProductContainer 컴포넌트 정의
@@ -39,7 +39,7 @@ const ProductContainer: React.FC = () => {
 
   return (
     <Container>
-      <Header as='h1' className='header-1'>猫</Header>
+      <h2 className='header-2'>猫一覧</h2>
       {loading ? (
         <Dimmer active inverted>
           <Loader>Loading</Loader>

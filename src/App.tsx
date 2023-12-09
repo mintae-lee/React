@@ -7,7 +7,6 @@ import {
 import ProductContainer from './containers/ProductContainer';
 import FavouritesContainer from './containers/FavouritesContainer';
 import SiteHeader from './components/SiteHeader';
-import TopNavigation from './components/TopNavigation';
 import Footer from './components/Footer';
 import NotFound from './NotFound';
 import './App.css';
@@ -17,7 +16,6 @@ function App() {
     <div className='App'>
 			<BrowserRouter>
 				<SiteHeader />
-        <TopNavigation />
 				<Routes>
 					<Route path="/" element={<ProductContainer />}></Route>
 					<Route path="/favourites/*" element={<FavouritesContainer />}></Route>
