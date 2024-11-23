@@ -25,3 +25,5 @@ FYI [running tests](https://facebook.github.io/create-react-app/docs/running-tes
 ## 배포
 
 master 브랜치에 merge 하면 자동으로 firebase 로 디플로이
+
+FYI [Firebase URL](https://console.firebase.google.com/project/mindful-a7340/overview?hl=ja)
