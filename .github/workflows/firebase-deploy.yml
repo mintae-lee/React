@@ -1,4 +1,4 @@
-name: Deploy to Firebase Hosting on merge
+name: Deploy to Firebase Hosting
 
 on:
   push:
@@ -8,21 +8,27 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '16'
 
-    - name: Install Dependencies
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
       run: npm install
 
-    - name: Build
-      run: npm run build
+    - name: Set up Firebase credentials
+      env:
+        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+      run: echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" > "$HOME/firebase-key.json"
 
-    - name: Deploy to Firebase
+    - name: Deploy to Firebase Hosting
       uses: w9jds/firebase-action@master
       with:
         args: deploy --only hosting
       env:
-        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        GOOGLE_APPLICATION_CREDENTIALS: $HOME/firebase-key.json
