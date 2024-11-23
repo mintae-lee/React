@@ -5,13 +5,13 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="md-flex md-justify-between">
-        <a href='http://localhost:3000/' className="footer__logo">
+        <a href='#' className="footer__logo">
           <img src={logo} height="30" alt="Logo" />
         </a>
         <ul className="footer__navi flex">
-          <li><a href='http://localhost:3000/'>About</a></li>
-          <li><a href='http://localhost:3000/'>サイトマップ</a></li>
-          <li><a href='http://localhost:3000/'>プライバシーポリシー</a></li>
+          <li><a href='#'>About</a></li>
+          <li><a href='#'>サイトマップ</a></li>
+          <li><a href='#'>プライバシーポリシー</a></li>
         </ul>
       </div>
       <hr />
