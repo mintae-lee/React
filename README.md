@@ -1,29 +1,32 @@
-# React App
+# Reactアプリ
 
-프로젝트 소스 [Create React App](https://github.com/facebook/create-react-app).
+プロジェクトのソースは [Create React App](https://github.com/facebook/create-react-app) を利用しています。
 
 
-## 로컬환경
+## ローカル環境
 
-프로젝트 폴더에서 아래를 실행
+プロジェクトフォルダーで以下を実行してください。
 
-### 로컬서버 시작
+### 依存関係のインストール
+`npm install`
+
+### ローカルサーバーの起動
 `npm start`
-FYI [http://localhost:3000](http://localhost:3000)
+参考: [http://localhost:3000](http://localhost:3000)
 
 
-### 로컬 테스트
+### ローカルテスト
 `npm test`
-FYI [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
+参考: [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
 
 
-### 빌드
+### ビルド
 `npm run build`
 
-결과파일 폴더 `build` 
+成果物は `build` フォルダーに出力されます。
 
-## 배포
+## デプロイ
 
-master 브랜치에 merge 하면 자동으로 firebase 로 디플로이
+master ブランチにマージされると自動で Firebase にデプロイされます。
 
-FYI [Firebase URL](https://console.firebase.google.com/project/mindful-a7340/overview?hl=ja)
+参考: [Firebase URL](https://console.firebase.google.com/project/mindful-a7340/overview?hl=ja)
