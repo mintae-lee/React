@@ -2,9 +2,9 @@
  * FETCH_PRODUCTS_REQUEST, 
  * FETCH_PRODUCTS_SUCCESS, 
  * FETCH_PRODUCTS_FAILURE
- * 라는 액션 타입들과 각각의 액션 생성 함수들을 정의합니다. 
- * 이 파일에서는 TypeScript의 타입 시스템을 사용하여, 
- * 액션 객체들이 갖는 속성과 값을 엄격하게 정의하고 있습니다.
+ * というアクションタイプとそれぞれのアクションクリエーターを定義します。
+ * このファイルでは TypeScript の型システムを使用し、
+ * アクションオブジェクトの構造と値を厳密に定義しています。
  */
 import { Product } from '../services/productService';
 
