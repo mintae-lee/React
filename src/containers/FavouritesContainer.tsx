@@ -1,33 +1,41 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import FavouriteList from '../components/FavouriteList';
-import favouritesService, { Favourite } from '../services/favouritesService';
-import { Dimmer, Loader } from 'semantic-ui-react';
+import { Dimmer, Loader, Container, Message } from 'semantic-ui-react';
+import { useAppDispatch, useAppSelector } from '../hooks';
+import { fetchFavourites } from '../features/favourites/favouritesSlice';
 
 const FavouritesContainer: React.FC = () => {
 
-  const [loading, setLoading] = useState(true);
-  const [favourites, setProducts] = useState<Favourite[]>([]);
+  const dispatch = useAppDispatch();
+  const { items: favourites, status, error } = useAppSelector(
+    (state) => state.favourites,
+  );
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await favouritesService.fetchFavourites();
-      setProducts(data);
-      setLoading(false);
-    };
-    fetchData();
-  }, []);
+    if (status === 'idle') {
+      dispatch(fetchFavourites());
+    }
+  }, [dispatch, status]);
+
+  const isLoading = status === 'loading';
+  const hasError = status === 'failed';
 
   return (
-    <div className='container'>
+    <Container className='container'>
       <h1>お気に入り一覧</h1>
-      {loading ? (
+      {isLoading ? (
         <Dimmer active inverted>
           <Loader>Loading</Loader>
         </Dimmer>
+      ) : hasError ? (
+        <Message negative>
+          <Message.Header>読み込みエラー</Message.Header>
+          <p>{error}</p>
+        </Message>
       ) : (
         <FavouriteList favourites={favourites} />
       )}
-    </div>
+    </Container>
   );
 };
 
