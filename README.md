@@ -14,6 +14,9 @@ React Router + Redux Toolkit で構成された単一ページアプリです。
 - `/favourites/*` お気に入り: 保存済みの The Cat API favourites を取得し、カードで表示します。
 - 共通ヘッダー/フッター: ナビゲーション、検索 UI、外部リンクなどを Semantic UI コンポーネントで提供。
 
+<img width="1412" height="662" alt="スクリーンショット 2025-11-09 14 55 37" src="https://github.com/user-attachments/assets/d67bcb3d-2a1d-4978-94c2-d990268450d3" />
+
+
 ## アーキテクチャ
 ```mermaid
 graph TD
