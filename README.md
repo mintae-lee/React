@@ -3,7 +3,8 @@
 React Router + Redux Toolkit で構成された単一ページアプリです。The Cat API から猫カードを取得し、一覧とお気に入り (/favourites) の 2 画面でブラウズ体験と状態管理の実装力を示すポートフォリオ用途のプロジェクトになっています。
 
 ## 目的と見せ場
-- API/ストアのアーキテクチャを再設計し、共通クライアント・環境変数・型安全なサービス層を実装
+- **課題**: API 呼び出しがコンポーネントに散在し、エラー/ローディングの制御や API キー管理が煩雑だった
+- API/ストアのアーキテクチャを再設計し、共通クライアント・環境変数・型安全なサービス層でこの課題を解消
 - Redux Toolkit スライスと AsyncThunk でローディング/エラーを一元管理し、再利用しやすい UI パターンを構築
 - Semantic UI React を使ったレスポンシブなカードレイアウトとローディング、エラーメッセージの UX 改善
 - TypeScript 全体適用により、API レスポンスとコンポーネント間の型を明確化
@@ -48,7 +49,7 @@ sequenceDiagram
 
 ## Tech Highlights
 - **React 18 + TypeScript**: 型安全な UI 実装
-- **Redux Toolkit**: Slice/AsyncThunk でデータ取得フローを統一
+- **Redux Toolkit + AsyncThunk**: スライスごとに非同期フローを定義し、ローディング・成功・失敗を一元管理することで UI 側は状態マシンとして利用可能
 - **Semantic UI React**: レイアウトとアクセシビリティを簡潔に実装
 - **Cat API クライアント**: `catApiRequest` が API キー、クエリ結合、エラー処理を共通化
 
