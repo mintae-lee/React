@@ -1,5 +1,5 @@
 const CAT_API_BASE_URL =
-  process.env.REACT_APP_CAT_API_BASE_URL ?? 'https://api.thecatapi.com/v1/images/search';
+  process.env.REACT_APP_CAT_API_BASE_URL ?? 'https://api.thecatapi.com/v1';
 
 const CAT_API_KEY = process.env.REACT_APP_CAT_API_KEY;
 

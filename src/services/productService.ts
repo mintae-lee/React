@@ -23,7 +23,7 @@ export interface Product {
 
 class ProductService {
   async fetchProducts(limit = 15): Promise<Product[]> {
-    return catApiRequest<Product[]>('/images/search', {
+    return catApiRequest<Product[]>('/v1/images/search', {
       query: { limit },
     });
   }

@@ -82,8 +82,8 @@ sequenceDiagram
 ## デプロイ
 Firebase Hosting を想定しています。GitHub main/master にマージ後、CI で `npm run build` → `firebase deploy` を行う構成を利用できます。
 
-## 今後の拡張アイデア
+## 今後の拡張ToDo
 - 無限スクロールやフィルタリングでユーザー操作の幅を拡大
 - お気に入り登録・解除 API を追加し、サーバーとの双方向同期を実装
 - RTK Query やキャッシュレイヤー導入でデータ取得を高度化
-- Lighthouse/Pa11y を用いたアクセシビリティ検証の自動化
+- Lighthouse を用いたアクセシビリティ検証

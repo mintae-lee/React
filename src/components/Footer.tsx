@@ -9,14 +9,12 @@ const Footer: React.FC = () => {
           <img src={logo} height="30" alt="Logo" />
         </a>
         <ul className="footer__navi flex">
-          <li><a href='https://mindful-a7340.web.app/'>About</a></li>
-          <li><a href='https://mindful-a7340.web.app/'>サイトマップ</a></li>
-          <li><a href='https://mindful-a7340.web.app/'>プライバシーポリシー</a></li>
+          <li><a href='#'>About</a></li>
         </ul>
       </div>
       <hr />
       <p className="copyright">
-        © 2023 Cat Inc. All Rights Reserved.
+        © {new Date().getFullYear()} Cat Inc. All Rights Reserved.
       </p>
     </footer>
   );
